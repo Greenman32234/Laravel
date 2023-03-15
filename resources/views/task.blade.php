@@ -18,5 +18,15 @@
     <input type="submit" value="Add Post">
     @csrf
 </form>
+<div class="modal">
+    <div>{{ $slot }}</div>
+    <div class="close button etc"> ... </div>
+</div>
+<!-- в другом шаблоне -->
+@component('partials.modal')
+    <p>The password you have provided is not valid.
+        Here are the rules for valid passwords: [ ... ]</р>
+        <р><а href="#"> ... </а></p>
+@endcomponent
 </body>
 </html>
